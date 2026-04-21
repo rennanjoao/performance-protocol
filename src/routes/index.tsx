@@ -1,26 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { AuthorityBar } from "@/components/site/AuthorityBar";
+import { Pillars } from "@/components/site/Pillars";
+import { HowItWorks } from "@/components/site/HowItWorks";
+import { StudentProfile } from "@/components/site/StudentProfile";
+import { Pricing } from "@/components/site/Pricing";
+import { LeadForm } from "@/components/site/LeadForm";
+import { Footer } from "@/components/site/Footer";
+import { ExitModal } from "@/components/site/ExitModal";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "RENNAN. — Consultoria Desportiva de Alta Performance" },
+      {
+        name: "description",
+        content:
+          "Protocolo sob medida: anamnese, treino biomecânico, ciclagem de hidratos e feedback quinzenal. Resultado mensurável a cada 14 dias.",
+      },
+      { property: "og:title", content: "RENNAN. — Protocolo Sob Medida" },
+      {
+        property: "og:description",
+        content:
+          "Consultoria desportiva orientada por dados, biomecânica e periodização. Vagas limitadas.",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      <AuthorityBar />
+      <Pillars />
+      <HowItWorks />
+      <StudentProfile />
+      <Pricing />
+      <LeadForm />
+      <Footer />
+      <ExitModal />
+    </main>
+  );
 }
