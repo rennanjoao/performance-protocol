@@ -42,7 +42,7 @@ export function Hero() {
           className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg"
         >
           Não existe protocolo universal. Existe o seu — construído a partir da sua anamnese, os
-          seus exames, a sua rotina e os seus objetivos. Resultado mensurável a cada 14 dias ou
+          seus exames, a sua rotina e os seus objetivos. Resultado mensurável a cada 15 dias ou
           ajustamos o protocolo.
         </motion.p>
 
@@ -84,7 +84,7 @@ export function Hero() {
           className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-4 border-t border-border pt-8"
         >
           {[
-            { k: "14d", v: "Ciclo de ajuste" },
+            { k: "15d", v: "Ciclo de ajuste" },
             { k: "100%", v: "Personalizado" },
           ].map((s) => (
             <div key={s.v} className="text-center">
