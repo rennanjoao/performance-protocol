@@ -5,6 +5,7 @@ import { AuthorityBar } from "@/components/site/AuthorityBar";
 import { Pillars } from "@/components/site/Pillars";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { StudentProfile } from "@/components/site/StudentProfile";
+import { Testimonials } from "@/components/site/Testimonials";
 import { Pricing } from "@/components/site/Pricing";
 import { LeadForm } from "@/components/site/LeadForm";
 import { Footer } from "@/components/site/Footer";
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Protocolo sob medida: anamnese, treino biomecânico, ciclagem de hidratos e feedback quinzenal. Resultado mensurável a cada 14 dias.",
+          "Protocolo sob medida: anamnese, treino biomecânico e feedback quinzenal. Resultado mensurável a cada 14 dias.",
       },
       { property: "og:title", content: "RENNAN. — Protocolo Sob Medida" },
       {
@@ -38,6 +39,7 @@ function Index() {
       <Pillars />
       <HowItWorks />
       <StudentProfile />
+      <Testimonials />
       <Pricing />
       <LeadForm />
       <Footer />

@@ -4,11 +4,11 @@ const yes = [
   "Está disposto a executar o protocolo à risca",
   "Quer métricas e evolução mensurável",
   "Encara treino e nutrição como compromisso",
-  "Procura resultado de longo prazo, não atalho",
+  "Busca resultado de longo prazo, não atalho",
 ];
 
 const no = [
-  "Procura motivação semanal e conforto",
+  "Busca motivação semanal e conforto",
   "Quer dieta milagre ou promessa rápida",
   "Não consegue cumprir feedback quinzenal",
   "Acha que protocolo universal funciona",
@@ -35,7 +35,7 @@ export function StudentProfile() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <div className="rounded-lg border border-border bg-card p-6">
             <h3 className="text-sm font-bold uppercase tracking-wider text-success">
-              É para si se...
+              É para você se...
             </h3>
             <ul className="mt-4 space-y-3">
               {yes.map((y) => (
@@ -48,7 +48,7 @@ export function StudentProfile() {
           </div>
           <div className="rounded-lg border border-border bg-card p-6">
             <h3 className="text-sm font-bold uppercase tracking-wider text-primary">
-              Não é para si se...
+              Não é para você se...
             </h3>
             <ul className="mt-4 space-y-3">
               {no.map((n) => (
