@@ -4,6 +4,7 @@ import { Hero } from "@/components/site/Hero";
 import { AuthorityBar } from "@/components/site/AuthorityBar";
 import { Pillars } from "@/components/site/Pillars";
 import { HowItWorks } from "@/components/site/HowItWorks";
+import { ProofGallery } from "@/components/site/ProofGallery";
 import { StudentProfile } from "@/components/site/StudentProfile";
 import { Testimonials } from "../components/site/Testimonials";
 import { Pricing } from "@/components/site/Pricing";
@@ -38,6 +39,7 @@ function Index() {
       <AuthorityBar />
       <Pillars />
       <HowItWorks />
+      <ProofGallery />
       <StudentProfile />
       <Testimonials />
       <Pricing />
