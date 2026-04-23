@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Fitness" },
+      { name: "description", content: "Performance Protocol is a high-conversion landing page for a data-driven sports consultancy." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Fitness" },
+      { property: "og:description", content: "Performance Protocol is a high-conversion landing page for a data-driven sports consultancy." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Fitness" },
+      { name: "twitter:description", content: "Performance Protocol is a high-conversion landing page for a data-driven sports consultancy." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ff4a51a-0a8e-43b5-a651-80a58e325997/id-preview-b3bdad27--1d3c023a-f04c-4585-ad3e-87e43633fcdd.lovable.app-1776952568270.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ff4a51a-0a8e-43b5-a651-80a58e325997/id-preview-b3bdad27--1d3c023a-f04c-4585-ad3e-87e43633fcdd.lovable.app-1776952568270.png" },
     ],
     links: [
       {
