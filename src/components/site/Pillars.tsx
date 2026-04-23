@@ -1,4 +1,4 @@
-import { Utensils, Dumbbell, LineChart, Activity } from "lucide-react";
+import { Utensils, Dumbbell, LineChart } from "lucide-react";
 import { motion } from "framer-motion";
 
 const cards = [
@@ -6,11 +6,6 @@ const cards = [
     icon: Utensils,
     title: "Nutrição Científica baseada em Protocolo TACO / FODMAPs",
     desc: "Macros reais, substituições inteligentes e cálculos calibrados à sua rotina e tolerâncias digestivas.",
-  },
-  {
-    icon: Activity,
-    title: "Estratégia de Performance com Ciclagem de Hidratos",
-    desc: "Periodização de carboidratos por demanda do treino para destravar metabolismo e otimizar composição corporal.",
   },
   {
     icon: LineChart,

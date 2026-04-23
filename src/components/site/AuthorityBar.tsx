@@ -1,8 +1,7 @@
-import { Database, Activity, MessageSquare, Dna } from "lucide-react";
+import { Database, MessageSquare, Dna } from "lucide-react";
 
 const items = [
   { icon: Database, label: "Protocolo TACO / FODMAPs" },
-  { icon: Activity, label: "Ciclagem de Hidratos" },
   { icon: MessageSquare, label: "Feedback Quinzenal" },
   { icon: Dna, label: "Biomecânica Avançada" },
 ];

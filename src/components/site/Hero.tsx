@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, PlayCircle, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20o%20meu%20Protocolo";
 const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
 
 export function Hero() {
@@ -54,7 +53,7 @@ export function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <Button asChild size="lg" className="btn-glow-primary">
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
               Quero o meu Protocolo <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>

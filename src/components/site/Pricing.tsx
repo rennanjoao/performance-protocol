@@ -1,6 +1,6 @@
 import { PricingCard } from "./PricingCard";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20o%20meu%20Protocolo";
+const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
 
 export function Pricing() {
   return (
@@ -22,12 +22,12 @@ export function Pricing() {
             cycleLabel="3 meses de protocolo"
             monthly="R$ 300"
             total="R$ 900"
-            ctaHref={WHATSAPP_URL}
+            ctaHref={INSTAGRAM_URL}
             features={[
               "3 ciclos de treino",
               "Macros calibrados",
               "6 feedbacks quinzenais",
-              "Suporte por WhatsApp",
+              "Suporte direto",
               "Parcelamento no cartão sem juros",
             ]}
           />
@@ -39,10 +39,9 @@ export function Pricing() {
             monthly="R$ 270"
             total="R$ 1.620"
             originalTotal="R$ 1.800"
-            ctaHref={WHATSAPP_URL}
+            ctaHref={INSTAGRAM_URL}
             features={[
               "6 ciclos de treino",
-              "Ciclagem de hidratos",
               "12 feedbacks quinzenais",
               "Ajustes de periodização",
               "Prioridade no suporte",
@@ -56,12 +55,11 @@ export function Pricing() {
             monthly="R$ 255"
             total="R$ 3.060"
             originalTotal="R$ 3.600"
-            ctaHref={WHATSAPP_URL}
+            ctaHref={INSTAGRAM_URL}
             features={[
               "12 ciclos de treino",
               "Protocolos avançados",
               "24 feedbacks quinzenais",
-              "Ciclagem + estratégias de pico",
               "Acompanhamento de longo prazo",
               "Parcelamento no cartão sem juros",
             ]}

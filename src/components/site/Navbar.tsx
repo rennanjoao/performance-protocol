@@ -1,14 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20o%20meu%20Protocolo";
 const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
 
 const links = [
   { href: "#metodo", label: "Método" },
   { href: "#resultados", label: "Resultados" },
   { href: "#investimento", label: "Investimento" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "#contato", label: "Contato" },
 ];
 
 export function Navbar() {
@@ -42,7 +41,7 @@ export function Navbar() {
           </li>
         </ul>
         <Button asChild className="btn-glow-primary hidden md:inline-flex">
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
             Quero o meu Protocolo
           </a>
         </Button>
@@ -57,7 +56,7 @@ export function Navbar() {
             <Instagram className="h-5 w-5" />
           </a>
           <Button asChild size="sm" className="btn-glow-primary">
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
               Protocolo
             </a>
           </Button>
