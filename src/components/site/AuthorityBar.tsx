@@ -1,7 +1,7 @@
 import { Database, MessageSquare, Dna } from "lucide-react";
 
 const items = [
-  { icon: Database, label: "Protocolo TACO / FODMAPs" },
+  { icon: Database, label: "Protocolo Individual" },
   { icon: MessageSquare, label: "Feedback Quinzenal" },
   { icon: Dna, label: "Biomecânica Avançada" },
 ];

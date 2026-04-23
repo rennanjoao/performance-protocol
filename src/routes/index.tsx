@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Protocolo sob medida: anamnese, treino biomecânico e feedback quinzenal. Resultado mensurável a cada 14 dias.",
+          "Protocolo sob medida: anamnese, treino biomecânico e feedback quinzenal. Resultado mensurável a cada 15 dias.",
       },
       { property: "og:title", content: "RENNAN. — Protocolo Sob Medida" },
       {
