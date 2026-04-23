@@ -10,6 +10,8 @@ export interface PricingCardProps {
   features: string[];
   highlight?: boolean;
   ctaHref: string;
+  discountLabel?: string;
+  originalTotal?: string;
 }
 
 export function PricingCard({
@@ -20,6 +22,8 @@ export function PricingCard({
   features,
   highlight,
   ctaHref,
+  discountLabel,
+  originalTotal,
 }: PricingCardProps) {
   return (
     <div
@@ -34,7 +38,14 @@ export function PricingCard({
         </span>
       )}
       <div>
-        <h3 className="text-lg font-bold">{name}</h3>
+        <div className="flex items-center gap-2">
+          <h3 className="text-lg font-bold">{name}</h3>
+          {discountLabel && (
+            <span className="rounded-md bg-success/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-success">
+              {discountLabel}
+            </span>
+          )}
+        </div>
         <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
           {cycleLabel}
         </p>
@@ -43,7 +54,15 @@ export function PricingCard({
         <span className="text-4xl font-extrabold">{monthly}</span>
         <span className="text-sm text-muted-foreground">/mês</span>
       </div>
-      <p className="mt-1 text-xs text-muted-foreground">Total {total}</p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        Total {total}
+        {originalTotal && (
+          <span className="ml-2 line-through opacity-60">{originalTotal}</span>
+        )}
+      </p>
+      <p className="mt-1 text-xs font-medium text-primary">
+        Parcelamento no cartão sem juros
+      </p>
 
       <ul className="mt-6 space-y-3 border-t border-border pt-6">
         {features.map((f) => (

@@ -1,7 +1,6 @@
-import { BadgeCheck, Database, Activity, MessageSquare, Dna } from "lucide-react";
+import { Database, Activity, MessageSquare, Dna } from "lucide-react";
 
 const items = [
-  { icon: BadgeCheck, label: "CREF Ativo 206788-G/SP" },
   { icon: Database, label: "Protocolo TACO / FODMAPs" },
   { icon: Activity, label: "Ciclagem de Hidratos" },
   { icon: MessageSquare, label: "Feedback Quinzenal" },

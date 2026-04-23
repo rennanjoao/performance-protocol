@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20o%20meu%20Protocolo";
+const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
 
 export function Hero() {
   return (
@@ -64,16 +65,28 @@ export function Hero() {
           </Button>
         </motion.div>
 
+        <motion.a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noreferrer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-5 inline-flex items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-primary md:text-sm"
+        >
+          <Instagram className="h-4 w-4" />
+          Acompanhe os resultados diários no Instagram @rennan_digitalfit
+        </motion.a>
+
         <motion.dl
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-3 gap-4 border-t border-border pt-8"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-4 border-t border-border pt-8"
         >
           {[
             { k: "14d", v: "Ciclo de ajuste" },
             { k: "100%", v: "Personalizado" },
-            { k: "CREF", v: "206788-G/SP" },
           ].map((s) => (
             <div key={s.v} className="text-center">
               <dt className="text-2xl font-extrabold tracking-tight md:text-3xl">{s.k}</dt>

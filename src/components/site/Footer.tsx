@@ -1,3 +1,7 @@
+import { Instagram } from "lucide-react";
+
+const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card/40 py-10">
@@ -7,8 +11,17 @@ export function Footer() {
             RENNAN<span className="text-primary">.</span>
           </p>
           <p className="mt-2 text-xs text-muted-foreground">
-            CREF 206788-G/SP — Consultoria Desportiva de Alta Performance.
+            Consultoria Desportiva de Alta Performance.
           </p>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
+          >
+            <Instagram className="h-4 w-4" />
+            @rennan_digitalfit
+          </a>
         </div>
         <p className="max-w-md text-xs leading-relaxed text-muted-foreground">
           Aviso legal: a prescrição dietética detalhada é competência do nutricionista. O
