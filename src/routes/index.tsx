@@ -8,6 +8,7 @@ import { ProofGallery } from "@/components/site/ProofGallery";
 import { StudentProfile } from "@/components/site/StudentProfile";
 import { Testimonials } from "../components/site/Testimonials";
 import { Pricing } from "@/components/site/Pricing";
+import { Tools } from "@/components/site/Tools";
 import { LeadForm } from "@/components/site/LeadForm";
 import { Footer } from "@/components/site/Footer";
 
@@ -40,6 +41,7 @@ function Index() {
       <Pillars />
       <HowItWorks />
       <ProofGallery />
+      <Tools />
       <StudentProfile />
       <Testimonials />
       <Pricing />
