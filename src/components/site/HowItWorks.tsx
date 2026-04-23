@@ -3,7 +3,7 @@ import { ClipboardList, FileCheck2, Activity, RefreshCcw } from "lucide-react";
 const steps = [
   { icon: ClipboardList, n: "01", title: "Anamnese Completa", desc: "Físico, rotina, neurológico." },
   { icon: FileCheck2, n: "02", title: "Protocolo Personalizado", desc: "Construído sobre os seus dados." },
-  { icon: Activity, n: "03", title: "Execução Monitorizada", desc: "Carga, intensidade, recuperação." },
+  { icon: Activity, n: "03", title: "Execução Monitorada", desc: "Carga, intensidade, recuperação." },
   { icon: RefreshCcw, n: "04", title: "Feedback + Ajuste", desc: "A cada 15 dias." },
 ];
 
