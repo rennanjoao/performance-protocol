@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const cards = [
   {
     icon: Utensils,
-    title: "Nutrição Científica baseada em Protocolo TACO / FODMAPs",
+    title: "Nutrição Científica baseada em Protocolo ",
     desc: "Macros reais, substituições inteligentes e cálculos calibrados à sua rotina e tolerâncias digestivas.",
   },
   {
@@ -15,6 +15,7 @@ const cards = [
   {
     icon: Dumbbell,
     title: "Treinamento de Alta Precisão com Biomecânica Avançada",
+    
     desc: "Divisão por biótipo, progressão de carga e execução cirúrgica orientada ao seu objetivo.",
   },
 ];
