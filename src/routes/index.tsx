@@ -5,7 +5,7 @@ import { AuthorityBar } from "@/components/site/AuthorityBar";
 import { Pillars } from "@/components/site/Pillars";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { StudentProfile } from "@/components/site/StudentProfile";
-import { Testimonials } from "@/components/site/Testimonials";
+import { Testimonials } from "../components/site/Testimonials";
 import { Pricing } from "@/components/site/Pricing";
 import { LeadForm } from "@/components/site/LeadForm";
 import { Footer } from "@/components/site/Footer";
