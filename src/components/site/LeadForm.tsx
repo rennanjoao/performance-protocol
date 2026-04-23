@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
+const TARGET_EMAIL = "rennanjgoncalves@gmail.com";
+
 export function LeadForm() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -12,10 +14,25 @@ export function LeadForm() {
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const goal = String(data.get("goal") ?? "");
+
+    const subject = `Nova anamnese — ${name}`;
+    const body = `Nome: ${name}\nEmail: ${email}\n\nObjetivo principal:\n${goal}`;
+    const mailto = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
     setTimeout(() => {
       setLoading(false);
       setSent(true);
-    }, 700);
+    }, 500);
   }
 
   return (

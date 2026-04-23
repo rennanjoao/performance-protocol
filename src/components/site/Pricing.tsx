@@ -12,7 +12,7 @@ export function Pricing() {
             Compromisso define o resultado.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground md:text-base">
-            Mesma mensalidade. Compromissos diferentes. Quem fica mais tempo, evolui mais fundo.
+            Quanto maior o compromisso, maior o desconto. Parcelamento no cartão sem juros em todos os planos.
           </p>
         </div>
 
@@ -28,14 +28,17 @@ export function Pricing() {
               "Macros calibrados",
               "6 feedbacks quinzenais",
               "Suporte por WhatsApp",
+              "Parcelamento no cartão sem juros",
             ]}
           />
           <PricingCard
             highlight
             name="Semestral"
+            discountLabel="-10%"
             cycleLabel="6 meses de protocolo"
-            monthly="R$ 300"
-            total="R$ 1.800"
+            monthly="R$ 270"
+            total="R$ 1.620"
+            originalTotal="R$ 1.800"
             ctaHref={WHATSAPP_URL}
             features={[
               "6 ciclos de treino",
@@ -43,13 +46,16 @@ export function Pricing() {
               "12 feedbacks quinzenais",
               "Ajustes de periodização",
               "Prioridade no suporte",
+              "Parcelamento no cartão sem juros",
             ]}
           />
           <PricingCard
             name="Anual"
+            discountLabel="-15%"
             cycleLabel="12 meses de protocolo"
-            monthly="R$ 300"
-            total="R$ 3.600"
+            monthly="R$ 255"
+            total="R$ 3.060"
+            originalTotal="R$ 3.600"
             ctaHref={WHATSAPP_URL}
             features={[
               "12 ciclos de treino",
@@ -57,6 +63,7 @@ export function Pricing() {
               "24 feedbacks quinzenais",
               "Ciclagem + estratégias de pico",
               "Acompanhamento de longo prazo",
+              "Parcelamento no cartão sem juros",
             ]}
           />
         </div>

@@ -8,7 +8,6 @@ import { StudentProfile } from "@/components/site/StudentProfile";
 import { Pricing } from "@/components/site/Pricing";
 import { LeadForm } from "@/components/site/LeadForm";
 import { Footer } from "@/components/site/Footer";
-import { ExitModal } from "@/components/site/ExitModal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -42,7 +41,6 @@ function Index() {
       <Pricing />
       <LeadForm />
       <Footer />
-      <ExitModal />
     </main>
   );
 }
