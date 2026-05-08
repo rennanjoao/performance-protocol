@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { ClipboardList, FileCheck2, Activity, RefreshCcw } from "lucide-react";
 
 const steps = [
@@ -19,21 +20,14 @@ export function HowItWorks() {
         </div>
 
         <ol
-          className="mt-14 grid gap-6 md:items-stretch"
-          style={{
-            gridTemplateColumns: "1fr",
-          }}
+          className="mt-14 grid gap-6 md:items-stretch md:gap-4"
+          style={{ ["--cols" as never]: "1fr auto 1fr auto 1fr auto 1fr" }}
         >
-          <div
-            className="contents md:[display:grid] md:gap-4 md:items-center"
-            style={{ gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr" }}
-          >
+          <style>{`@media (min-width: 768px){ .howitworks-grid{ grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; } }`}</style>
+          <div className="howitworks-grid contents md:grid md:items-center md:gap-4">
             {steps.map((s, i) => (
-              <>
-                <li
-                  key={s.n}
-                  className="relative rounded-lg border border-border bg-background p-6"
-                >
+              <Fragment key={s.n}>
+                <li className="relative rounded-lg border border-border bg-background p-6">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-muted-foreground">{s.n}</span>
                     <s.icon className="h-5 w-5 text-primary" />
@@ -44,14 +38,14 @@ export function HowItWorks() {
                 {i < steps.length - 1 && (
                   <div
                     aria-hidden
-                    className="hidden md:block h-px w-full"
+                    className="hidden md:block h-px w-12 lg:w-16"
                     style={{
                       backgroundImage:
                         "repeating-linear-gradient(to right, color-mix(in oklab, var(--primary) 55%, transparent) 0 6px, transparent 6px 12px)",
                     }}
                   />
                 )}
-              </>
+              </Fragment>
             ))}
           </div>
         </ol>
