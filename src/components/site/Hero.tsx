@@ -16,6 +16,22 @@ export function Hero() {
         }}
       />
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-32 -z-10 flex justify-center select-none"
+        >
+          <span
+            className="text-[18rem] md:text-[26rem] leading-none font-normal tracking-tighter"
+            style={{
+              fontFamily: '"Bebas Neue", sans-serif',
+              WebkitTextStroke: "1px color-mix(in oklab, var(--primary) 35%, transparent)",
+              color: "transparent",
+              opacity: 0.18,
+            }}
+          >
+            PP
+          </span>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,18 +97,30 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-4 border-t border-border pt-8"
+          className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 border-t border-border pt-8 md:grid-cols-4"
         >
           {[
-            { k: "15d", v: "Ciclo de ajuste" },
+            { k: "14d", v: "Ciclo de ajuste" },
             { k: "100%", v: "Personalizado" },
+            { k: "3x", v: "Fases de protocolo" },
+            { k: "CREF", v: "Credenciado" },
           ].map((s) => (
             <div key={s.v} className="text-center">
-              <dt className="text-2xl font-extrabold tracking-tight md:text-3xl">{s.k}</dt>
+              <dt
+                className="text-[2.5rem] leading-none tracking-tight"
+                style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+              >
+                {s.k}
+              </dt>
               <dd className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.v}</dd>
             </div>
           ))}
         </motion.dl>
+        <div
+          aria-hidden
+          className="mx-auto mt-8 h-px max-w-3xl mask-fade-x"
+          style={{ background: "color-mix(in oklab, var(--primary) 60%, transparent)" }}
+        />
       </div>
     </section>
   );
