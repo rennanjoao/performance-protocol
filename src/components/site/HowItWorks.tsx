@@ -18,20 +18,42 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <ol className="mt-14 grid gap-6 md:grid-cols-4">
-          {steps.map((s) => (
-            <li
-              key={s.n}
-              className="relative rounded-lg border border-border bg-background p-6"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono text-muted-foreground">{s.n}</span>
-                <s.icon className="h-5 w-5 text-primary" />
-              </div>
-              <h3 className="mt-6 text-lg font-bold">{s.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
-            </li>
-          ))}
+        <ol
+          className="mt-14 grid gap-6 md:items-stretch"
+          style={{
+            gridTemplateColumns: "1fr",
+          }}
+        >
+          <div
+            className="contents md:[display:grid] md:gap-4 md:items-center"
+            style={{ gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr" }}
+          >
+            {steps.map((s, i) => (
+              <>
+                <li
+                  key={s.n}
+                  className="relative rounded-lg border border-border bg-background p-6"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono text-muted-foreground">{s.n}</span>
+                    <s.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="mt-6 text-lg">{s.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
+                </li>
+                {i < steps.length - 1 && (
+                  <div
+                    aria-hidden
+                    className="hidden md:block h-px w-full"
+                    style={{
+                      backgroundImage:
+                        "repeating-linear-gradient(to right, color-mix(in oklab, var(--primary) 55%, transparent) 0 6px, transparent 6px 12px)",
+                    }}
+                  />
+                )}
+              </>
+            ))}
+          </div>
         </ol>
       </div>
     </section>
