@@ -7,12 +7,13 @@ const items = [
 ];
 
 export function AuthorityBar() {
+  const repeated = [...items, ...items, ...items];
   return (
     <section aria-label="Autoridade" className="border-y border-border bg-card/40">
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-wider text-muted-foreground md:text-sm">
-          {items.map((it) => (
-            <li key={it.label} className="flex items-center gap-2">
+      <div className="overflow-hidden py-6 mask-fade-x">
+        <ul className="flex w-max items-center gap-12 text-xs uppercase tracking-wider text-muted-foreground md:text-sm animate-marquee">
+          {repeated.map((it, i) => (
+            <li key={i} className="flex shrink-0 items-center gap-2">
               <it.icon className="h-4 w-4 text-primary" />
               <span className="font-medium text-foreground/80">{it.label}</span>
             </li>

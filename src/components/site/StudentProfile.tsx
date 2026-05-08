@@ -25,11 +25,31 @@ export function StudentProfile() {
           </h2>
         </div>
 
-        <blockquote className="mt-12 border-l-4 border-primary bg-card/60 p-6 text-base leading-relaxed text-foreground/90 md:p-8 md:text-lg">
-          “Não busco volume de alunos, exijo métricas de evolução. Não desperdice o seu tempo, o
-          meu tempo ou o seu dinheiro se não estiver disposto a executar. Quem vende promessa e
-          conforto é loja de colchões; eu entrego resultado forjado em biomecânica, periodização e
-          dados reais.”
+        <blockquote
+          className="relative mt-12 overflow-hidden rounded-xl border border-primary/40 p-8 md:p-12 text-base leading-relaxed text-foreground md:text-xl"
+          style={{
+            background:
+              "linear-gradient(135deg, color-mix(in oklab, var(--primary) 12%, transparent), color-mix(in oklab, var(--card) 80%, transparent))",
+            boxShadow: "0 20px 60px -20px color-mix(in oklab, var(--primary) 35%, transparent)",
+          }}
+        >
+          <span
+            aria-hidden
+            className="pointer-events-none absolute -top-10 -left-2 select-none leading-none text-primary"
+            style={{
+              fontFamily: '"Bebas Neue", sans-serif',
+              fontSize: "12rem",
+              opacity: 0.18,
+            }}
+          >
+            &ldquo;
+          </span>
+          <p className="relative">
+            Não busco volume de alunos, exijo métricas de evolução. Não desperdice o seu tempo, o
+            meu tempo ou o seu dinheiro se não estiver disposto a executar. Quem vende promessa e
+            conforto é loja de colchões; eu entrego resultado forjado em biomecânica, periodização
+            e dados reais.
+          </p>
         </blockquote>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
