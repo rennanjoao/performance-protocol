@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 const yes = [
   "Está disposto a executar o protocolo à risca",
   "Quer métricas e evolução mensurável",
-  "Encara treino e nutrição como compromisso",
+  "Encara treino e alimentação como compromisso",
   "Busca resultado de longo prazo, não atalho",
 ];
 
