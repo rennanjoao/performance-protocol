@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const cards = [
   {
     icon: Utensils,
-    title: "Nutrição Científica baseada em Protocolo Individual",
-    desc: "Macros reais, substituições inteligentes e cálculos calibrados à sua rotina e tolerâncias digestivas.",
+    title: "Educação Alimentar e Estratégia",
+    desc: "Sugestões e direcionamentos alimentares para ajudar no emagrecimento e na criação de hábitos sustentáveis.",
   },
   {
     icon: LineChart,
     title: "Acompanhamento de Elite com Feedback Quinzenal",
-    desc: "Feedback estruturado, análise de TGI/sono e ajustes sem achismo — só dados.",
+    desc: "Acompanhamento ativo com revisão a cada 15 dias e ajustes conforme a sua evolução real.",
   },
   {
     icon: Dumbbell,

@@ -13,12 +13,12 @@ const items = [
   {
     img: feedbackImg,
     label: "Feedback Quinzenal",
-    desc: "Métricas, sono, TGI e progressão monitorados a cada 15 dias.",
+    desc: "Acompanhamento próximo com revisão a cada 15 dias.",
   },
   {
     img: protocolImg,
     label: "Protocolo Individual",
-    desc: "Treino, nutrição e rotina entregues em documento próprio.",
+    desc: "Estratégia construída de acordo com a sua rotina e o seu objetivo.",
   },
 ];
 
