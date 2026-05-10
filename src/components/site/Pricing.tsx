@@ -25,7 +25,7 @@ export function Pricing() {
             ctaHref={INSTAGRAM_URL}
             features={[
               "3 ciclos de treino",
-              "Macros calibrados",
+              "Estratégia alimentar calibrada",
               "6 feedbacks quinzenais",
               "Suporte direto",
               "Parcelamento no cartão sem juros",
