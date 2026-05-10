@@ -97,22 +97,21 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 border-t border-border pt-8 md:grid-cols-4"
+          className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-4 border-t border-border pt-8 md:grid-cols-4"
         >
           {[
-            { k: "14d", v: "Ciclo de ajuste" },
-            { k: "100%", v: "Personalizado" },
-            { k: "3x", v: "Fases de protocolo" },
-            { k: "CREF", v: "Credenciado" },
+            "Evolução sem extremismo",
+            "Ajustes conforme evolução",
+            "Estratégia feita pra você",
+            "Resultado sustentável",
           ].map((s) => (
-            <div key={s.v} className="text-center">
+            <div key={s} className="text-center">
               <dt
-                className="text-[2.5rem] leading-none tracking-tight"
+                className="text-2xl leading-tight tracking-tight md:text-[1.75rem]"
                 style={{ fontFamily: '"Bebas Neue", sans-serif' }}
               >
-                {s.k}
+                {s}
               </dt>
-              <dd className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.v}</dd>
             </div>
           ))}
         </motion.dl>

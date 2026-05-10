@@ -72,10 +72,11 @@ function AnamneseMock() {
 /* ---------- Mockup 02 — Protocolo ---------- */
 function ProtocolMock() {
   const meals = ["Café da manhã", "Almoço", "Lanche", "Jantar"];
-  const rows = [
-    { food: "Ovos inteiros", sub: "mexidos ou cozidos", cru: "100g", pronto: "95g", p: "13", c: "1", g: "11", k: "155" },
-    { food: "Aveia em flocos", sub: "finos ou grossos", cru: "40g", pronto: "120g", p: "5", c: "27", g: "3", k: "150" },
-    { food: "Banana prata", sub: "sem casca", cru: "90g", pronto: "90g", p: "1", c: "23", g: "0", k: "98" },
+  const items = [
+    { emoji: "🥚", label: "Proteína" },
+    { emoji: "🍞", label: "Carboidrato" },
+    { emoji: "🍌", label: "Fruta" },
+    { emoji: "☕", label: "Bebida opcional" },
   ];
   return (
     <div className="overflow-hidden rounded-md border border-border bg-[#0b0b0d] text-[9px] leading-tight">
@@ -83,27 +84,13 @@ function ProtocolMock() {
       <div className="px-4 py-3" style={{ backgroundColor: PROTOCOL_RED }}>
         <p className="text-[8px] uppercase tracking-[0.2em] text-white/70">Performance Protocol</p>
         <h4 className="mt-0.5 text-sm font-extrabold tracking-tight text-white">
-          Protocolo Personalizado
+          Estratégia Alimentar
         </h4>
-        <p className="mt-0.5 text-[8px] text-white/70">Recomposição corporal · Fase 1 de 3</p>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-1.5 px-3 py-2">
-        {[
-          { v: "1.840", u: "Kcal · dia" },
-          { v: "138g", u: "Proteína" },
-          { v: "12 sem", u: "Duração" },
-        ].map((s) => (
-          <div key={s.u} className="rounded-sm border border-white/10 bg-white/[0.02] p-1.5 text-center">
-            <p className="text-[10px] font-extrabold text-white">{s.v}</p>
-            <p className="text-[7px] uppercase tracking-wider text-white/40">{s.u}</p>
-          </div>
-        ))}
+        <p className="mt-0.5 text-[8px] text-white/70">Sugestões práticas · Rotina sustentável</p>
       </div>
 
       {/* Meal tabs */}
-      <div className="flex gap-1 px-3">
+      <div className="flex gap-1 px-3 pt-3">
         {meals.map((m, i) => (
           <span
             key={m}
@@ -119,51 +106,27 @@ function ProtocolMock() {
         ))}
       </div>
 
-      {/* Macro bar */}
-      <div className="mx-3 mb-1 mt-0 flex items-center justify-between rounded-sm border border-white/10 bg-white/[0.03] px-2 py-1 text-[7px]">
-        {[
-          { k: "Kcal", v: "403" },
-          { k: "Prot", v: "19g" },
-          { k: "Carb", v: "51g" },
-          { k: "Gord", v: "14g" },
-        ].map((m) => (
-          <span key={m.k} className="text-white/60">
-            {m.k} <span className="font-bold text-white">{m.v}</span>
-          </span>
-        ))}
-      </div>
-
-      {/* Table */}
-      <div className="px-3 pb-3">
-        <div className="grid grid-cols-7 gap-1 border-b border-white/10 pb-1 text-[7px] uppercase tracking-wider text-white/40">
-          <span className="col-span-2">Alimento</span>
-          <span style={{ color: PROTOCOL_RED }}>Cru</span>
-          <span style={{ color: PROTOCOL_ORANGE }}>Pronto</span>
-          <span>Prot</span>
-          <span>Carb</span>
-          <span>Kcal</span>
+      {/* Meal sections */}
+      <div className="px-3 pb-4">
+        <div className="rounded-sm border border-white/10 bg-white/[0.02] p-3">
+          <p className="font-mono text-[8px] uppercase tracking-[0.2em]" style={{ color: PROTOCOL_ORANGE }}>
+            Café da manhã
+          </p>
+          <ul className="mt-2 space-y-1.5">
+            {items.map((it) => (
+              <li
+                key={it.label}
+                className="flex items-center gap-2 rounded-sm border border-white/[0.06] bg-white/[0.02] px-2 py-1.5"
+              >
+                <span className="text-[14px] leading-none">{it.emoji}</span>
+                <span className="text-[10px] font-medium text-white">{it.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        {rows.map((r) => (
-          <div key={r.food} className="grid grid-cols-7 gap-1 border-b border-white/[0.06] py-1 text-[7px]">
-            <div className="col-span-2 text-white">
-              <p className="font-medium">{r.food}</p>
-              <p className="text-[6.5px] text-white/40">{r.sub}</p>
-            </div>
-            <span className="font-bold" style={{ color: PROTOCOL_RED }}>{r.cru}</span>
-            <span className="font-bold" style={{ color: PROTOCOL_ORANGE }}>{r.pronto}</span>
-            <span className="text-white/70">{r.p}</span>
-            <span className="text-white/70">{r.c}</span>
-            <span className="text-white/70">{r.k}</span>
-          </div>
-        ))}
-        <div className="mt-1 grid grid-cols-7 gap-1 pt-1 text-[7px] font-bold text-white">
-          <span className="col-span-2">Total refeição</span>
-          <span style={{ color: PROTOCOL_RED }}>—</span>
-          <span style={{ color: PROTOCOL_ORANGE }}>—</span>
-          <span>19g</span>
-          <span>51g</span>
-          <span>403</span>
-        </div>
+        <p className="mt-2 text-center text-[7.5px] uppercase tracking-wider text-white/40">
+          Sugestões práticas · sem extremismos
+        </p>
       </div>
     </div>
   );
@@ -248,8 +211,8 @@ const tools = [
   },
   {
     n: "02",
-    title: "Protocolo de Performance",
-    desc: "Plano alimentar 100% personalizado. Macros calculados, peso cru e peso pronto, refeições detalhadas e periodização por fases.",
+    title: "Estratégia Alimentar Aplicada",
+    desc: "Sugestões práticas de alimentação voltadas para saciedade, organização da rotina e melhora da composição corporal.\n✔ Ajustes progressivos\n✔ Estratégias sustentáveis\n✔ Opções práticas para o dia a dia\n✔ Organização alimentar sem extremismos",
     Mock: ProtocolMock,
   },
   {
@@ -290,7 +253,7 @@ export function Tools() {
                 </span>
               </div>
               <h3 className="mt-4 text-lg font-bold">{t.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
+              <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
               <div className="mt-5">
                 <t.Mock />
               </div>
