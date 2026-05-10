@@ -253,7 +253,7 @@ export function Tools() {
                 </span>
               </div>
               <h3 className="mt-4 text-lg font-bold">{t.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
+              <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
               <div className="mt-5">
                 <t.Mock />
               </div>
