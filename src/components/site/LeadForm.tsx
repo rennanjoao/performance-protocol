@@ -20,8 +20,8 @@ export function LeadForm() {
     setError(null);
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "Nova anamnese — RENNAN Digital Fit");
-    formData.append("from_name", "RENNAN Landing Page");
+    formData.append("subject", "Novo lead");
+    formData.append("from_name", "Landing Page FitPlan");
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
