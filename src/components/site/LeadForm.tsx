@@ -7,18 +7,37 @@ import { Textarea } from "@/components/ui/textarea";
 
 const TARGET_EMAIL = "rennanjgoncalves@gmail.com";
 const INSTAGRAM_URL = "https://www.instagram.com/rennan_digitalfit/";
+const WEB3FORMS_ACCESS_KEY = "2c5a03c3-2716-42b1-b2ba-d1869394ab5f";
 
 export function LeadForm() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError(null);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "Nova anamnese — RENNAN Digital Fit");
+    formData.append("from_name", "RENNAN Landing Page");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSent(true);
+      } else {
+        setError(data.message || "Erro ao enviar. Tente novamente.");
+      }
+    } catch {
+      setError("Erro de conexão. Tente novamente.");
+    } finally {
       setLoading(false);
-      setSent(true);
-    }, 500);
+    }
   }
 
   return (
@@ -61,16 +80,17 @@ export function LeadForm() {
             <form className="grid gap-5" onSubmit={onSubmit}>
               <div className="grid gap-2">
                 <Label htmlFor="name">Nome</Label>
-                <Input id="name" required placeholder="O seu nome" />
+                <Input id="name" name="name" required placeholder="O seu nome" />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" required placeholder="voce@email.com" />
+                <Input id="email" name="email" type="email" required placeholder="voce@email.com" />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="goal">Objetivo principal</Label>
-                <Textarea id="goal" required placeholder="Hipertrofia, recomposição, performance..." />
+                <Textarea id="goal" name="message" required placeholder="Hipertrofia, recomposição, performance..." />
               </div>
+              {error && <p className="text-sm text-destructive">{error}</p>}
               <Button type="submit" size="lg" className="btn-glow-primary" disabled={loading}>
                 {loading ? "A enviar..." : "Enviar"}
               </Button>
